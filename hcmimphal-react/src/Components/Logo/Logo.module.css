@@ -1,0 +1,16 @@
+.logo {
+  gap: 0.5rem;
+}
+
+.logoText {
+  color: var(--color-primary);
+  height: 27px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0.02em;
+}
+
+.logoImg {
+  height: 60px;
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --primary-bg-color: #3b3b3b;
+  --secondary-bg-color: #9b9b9b;
+  --font-heading: "Ubuntu", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --color-primary: #007bff;
+  --color-secondary: #6c757d;
+  --color-tertiary: #f8f9fa;
+  --color-quaternary: #fff;
+  --color-quinary: #343a40;
+  --color-success: #28a745;
+  --color-warning: #ffc107;
+  --color-danger: #dc3545;
+  --color-info: #17a2b8;
+  --color-light: #f8f9fa;
+  --color-dark: #343a40;
+  --color-gray-100: #f9f9f9;
+  --color-gray-200: #f3f3f3;
+  --color-theme: #2aa7ff;
+  --color-theme-bg: #343a40;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: var(--font-heading);
+}
+
+p,
+a {
+  font-family: var(--font-body);
+}
+
+button {
+  background-color: var(--color-theme);
+  border-radius: 8px;
+  color: #fff;
+  border: 0;
+  padding: 0.25rem 0.75rem;
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
