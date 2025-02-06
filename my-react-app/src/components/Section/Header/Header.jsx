@@ -54,11 +54,6 @@ function NavLink({ menu }) {
         {/* Menu Items */}
         <ul className="flex flex-col items-start mt-16 px-6 space-y-4">
           <MainMenu menu={menu} />
-          <li>
-            <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-              Login
-            </button>
-          </li>
         </ul>
       </div>
 
