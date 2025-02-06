@@ -1,12 +1,15 @@
 import { useState } from "react";
-import "./App.css";
+import { SnackbarProvider } from "notistack";
+import { Outlet } from "react-router-dom";
+import Header from "./components/Section/Header/Header";
 
 function App() {
   return (
     <>
-      <div className="bg-blue-500 text-white h-screen flex items-center justify-center rounded">
-        <h1 className="text-3xl font-bold">Hello, Tailwind! hellow</h1>
-      </div>
+      <SnackbarProvider>
+        <Header />
+        <Outlet />
+      </SnackbarProvider>
     </>
   );
 }

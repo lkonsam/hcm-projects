@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root{  
+  --color-brown-0: #b75d0a;
   --color-brown-1: #c1946a;
   --color-brown-2: : #b9936c;  
   --color-brown-3: #dac292; 
@@ -20,6 +21,9 @@
 *,
 *::before,
 *::after {
-  margin: 0;
   box-sizing: border-box;
+}
+
+button:hover{
+  cursor: pointer;
 }
