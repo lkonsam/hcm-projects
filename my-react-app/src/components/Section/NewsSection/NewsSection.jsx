@@ -43,8 +43,8 @@ export default function NewsSection() {
             paddingBottom: 40,
           }}
         >
-          {newsData?.map((ele) => (
-            <SwiperSlide key={ele.header_id}>
+          {newsData?.map((ele, index) => (
+            <SwiperSlide key={index}>
               <NewsCard ele={ele} />
             </SwiperSlide>
           ))}
@@ -61,9 +61,9 @@ function NewsCard({ ele }) {
         {ele?.header}
       </h3>
       <ul className="space-y-3">
-        {ele?.data.slice(0, 3).map((item) => (
+        {ele?.data.slice(0, 3).map((item, index) => (
           <li
-            key={item.news_id}
+            key={index}
             className="border-b border-gray-300 pb-2 last:border-none"
           >
             <Link to={`/news/view/${item.news_id}`} className="block">
