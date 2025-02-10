@@ -8,6 +8,7 @@ export function BreakpointProvider({ children }) {
   );
 
   function getBreakpoint(width) {
+    // console.log(width);
     if (width < 640) return "xs";
     if (width < 768) return "sm";
     if (width < 1024) return "md";

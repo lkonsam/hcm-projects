@@ -6,10 +6,19 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { useBreakpoint } from "../../../context/BreakpointContext";
 
 export default function NewsSection() {
   const [newsData, setNewsData] = useState([]);
   const [swiperInstance, setSwiperInstance] = useState(null);
+  const breakpoint = useBreakpoint(); // Get breakpoint value
+  const [slideNumber, setSlideNumber] = useState(4);
+
+  useEffect(() => {
+    const limit = { xs: 1, sm: 2, md: 3 }[breakpoint] || 4;
+    console.log(limit);
+    setSlideNumber(limit);
+  }, [breakpoint]);
 
   useEffect(() => {
     fetchNews().then((data) => setNewsData(data));
@@ -21,8 +30,8 @@ export default function NewsSection() {
       onMouseEnter={() => swiperInstance?.autoplay.stop()}
       onMouseLeave={() => swiperInstance?.autoplay.start()}
     >
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center border-b border-gray-300 pb-4">
+      <div className="w-full px-4">
+        <h2 className="w-full  text-3xl font-bold text-gray-800 mb-6 text-center border-b border-gray-300 pb-4">
           Latest News
         </h2>
         <Swiper
@@ -30,14 +39,10 @@ export default function NewsSection() {
           autoplay={{ delay: 3000, disableOnInteraction: true }}
           modules={[Autoplay, Pagination, Navigation]}
           onSwiper={setSwiperInstance}
-          slidesPerView={1}
+          slidesPerView={slideNumber}
           spaceBetween={20}
           pagination={{ clickable: true }}
           //   navigation={true}
-          breakpoints={{
-            640: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
           className="pb-10"
           style={{
             paddingBottom: 40,
@@ -56,7 +61,7 @@ export default function NewsSection() {
 
 function NewsCard({ ele }) {
   return (
-    <div className="bg-white shadow-lg rounded-xl overflow-hidden p-5 transition-transform transform hover:scale-105">
+    <div className="bg-white shadow-lg rounded-xl overflow-hidden p-5 transition-transform transform hover:scale-101">
       <h3 className="text-xl font-semibold text-gray-700 mb-3 border-b border-gray-300 pb-2">
         {ele?.header}
       </h3>
