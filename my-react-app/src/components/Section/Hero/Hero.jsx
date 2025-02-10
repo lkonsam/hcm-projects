@@ -1,58 +1,50 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Box, Typography, Button } from "@mui/material";
-import { Link } from "react-router-dom";
-import "swiper/css";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { fetchHeroData } from "../../../api/api";
 
 export default function Hero() {
   const [heroData, setHeroData] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
     fetchHeroData().then((data) => setHeroData(data));
   }, []);
 
-  return (
-    <Swiper spaceBetween={50} slidesPerView={1} loop>
-      {heroData?.map((data, index) => (
-        <SwiperSlide key={index}>
-          <Box position="relative">
-            <Box
-              component="img"
-              src={data.img}
-              alt={data.title}
-              width="100%"
-              height={{ xs: "300px", md: "500px" }}
-              sx={{ objectFit: "cover" }}
-            />
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % heroData.length);
+    }, 3000); // Auto-play every 3 seconds
 
-            <Box
-              position="absolute"
-              bottom="5%"
-              left="5%"
-              transform="translate(-50%, -50%)"
-              textAlign="center"
-              color="white"
-              p={3}
-              sx={{
-                background: "rgba(0, 0, 0, 0.5)",
-                borderRadius: "10px",
-              }}
-            >
-              <Typography variant="h3" component="h1" gutterBottom>
-                {data.title}
-              </Typography>
-              <Typography variant="h6" component="p" gutterBottom>
-                {data.description}
-              </Typography>
-              <Link to={data.link} style={{ textDecoration: "none" }}>
-                <Button variant="contained" size="large" disableElevation>
-                  {data.buttonText}
-                </Button>
-              </Link>
-            </Box>
-          </Box>
-        </SwiperSlide>
+    return () => clearInterval(interval);
+  }, [heroData]);
+
+  if (!heroData.length) return null;
+
+  return (
+    <div className="relative w-full h-[500px] overflow-hidden">
+      {heroData.map((data, index) => (
+        <div
+          key={index}
+          className={`absolute w-full h-full transition-opacity duration-1000 ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <img
+            src={data.img}
+            alt={data.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute bottom-10 left-5 bg-black bg-opacity-10 p-5 rounded-lg text-white">
+            <h1 className="text-2xl font-bold">{data.title}</h1>
+            <p className="text-lg">{data.description}</p>
+            <Link to={data.link} className="text-white no-underline">
+              <button className="mt-3 px-5 py-2 bg-blue-500 hover:bg-blue-700 text-white font-semibold rounded-lg">
+                {data.buttonText}
+              </button>
+            </Link>
+          </div>
+        </div>
       ))}
-    </Swiper>
+    </div>
   );
 }

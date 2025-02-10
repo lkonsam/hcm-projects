@@ -204,3 +204,226 @@ export async function fetchCommonLinks() {
   ];
   return data;
 }
+
+export async function fetchNews() {
+  const data = [
+    {
+      header_id: 1,
+      header: "Recruitment",
+      data: [
+        {
+          news_id: 1,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 2,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 3,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 4,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 5,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+    {
+      header_id: 2,
+      header: "NEWS/NOTICE/HIGHLIGHTS",
+      data: [
+        {
+          news_id: 6,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 7,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 8,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 9,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 10,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+    {
+      header_id: 2,
+      header: "TENDER",
+      data: [
+        {
+          news_id: 6,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 7,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 8,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 9,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 10,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+    {
+      header_id: 2,
+      header: "Lok Adalat",
+      data: [
+        {
+          news_id: 6,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 7,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 8,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 9,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 10,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+    {
+      header_id: 2,
+      header: "BENCH CONSTITUTIONS",
+      data: [
+        {
+          news_id: 6,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 7,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 8,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 9,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 10,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+    {
+      header_id: 2,
+      header: "E-COURTS",
+      data: [
+        {
+          news_id: 6,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 7,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 8,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 9,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 10,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+    {
+      header_id: 2,
+      header: "TRANSFER AND POSTINGS",
+      data: [
+        {
+          news_id: 6,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 7,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 8,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 9,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+        {
+          news_id: 10,
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          date: "2023-05-12",
+        },
+      ],
+    },
+  ];
+  return data;
+}

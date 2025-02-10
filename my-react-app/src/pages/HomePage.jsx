@@ -7,6 +7,7 @@ import Hero from "../components/Section/Hero/Hero";
 import NoticeMarqueue from "../components/Section/NoticeMarqueue/NoticeMarqueue";
 import CommonLink from "../components/Section/CommonLink/CommonLink";
 import { BreakpointProvider } from "../context/BreakpointContext";
+import NewsSection from "../components/Section/NewsSection/NewsSection";
 
 export default function HomePage() {
   return (
@@ -18,6 +19,7 @@ export default function HomePage() {
           <Hero />
           <NoticeMarqueue />
           <CommonLink />
+          <NewsSection />
         </div>
       </BreakpointProvider>
     </>
