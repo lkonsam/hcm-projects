@@ -10,6 +10,8 @@ import { BreakpointProvider } from "../context/BreakpointContext";
 import NewsSection from "../components/Section/NewsSection/NewsSection";
 import HolidaySection from "../components/Section/HolidaySection/HolidaySection";
 import JudgeSection from "../components/Section/JudgeSection/JudgeSection";
+import FooterSection from "../components/Section/FooterSection/FooterSection";
+import ContactUs from "../components/Section/ContactUs/ContactUs";
 
 export default function HomePage() {
   return (
@@ -24,7 +26,9 @@ export default function HomePage() {
           <NewsSection />
           <HolidaySection />
           <JudgeSection />
+          <ContactUs />
         </div>
+        <FooterSection />
       </BreakpointProvider>
     </>
   );

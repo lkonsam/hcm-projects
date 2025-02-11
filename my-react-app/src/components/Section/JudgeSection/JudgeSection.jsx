@@ -108,6 +108,7 @@ function JudgesCard({ ele }) {
       />
       <div className="mt-3">
         <h6 className="font-bold text-gray-800 text-lg">{ele.title}</h6>
+        <p className="font-black text-gray-800 text-sm">{ele.name}</p>
         <p className="text-gray-600 text-sm">{ele.post}</p>
       </div>
     </div>
