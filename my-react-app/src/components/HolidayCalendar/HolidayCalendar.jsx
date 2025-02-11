@@ -38,7 +38,7 @@ function ShowHoliday({ children, comment, id }) {
   );
 }
 
-export default function CustomCalendar({ holidays }) {
+export default function HolidayCalendar({ holidays }) {
   let today = startOfToday();
   // let [selectedDay, setSelectedDay] = useState(today);
   let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));

@@ -8,8 +8,7 @@ import NoticeMarqueue from "../components/Section/NoticeMarqueue/NoticeMarqueue"
 import CommonLink from "../components/Section/CommonLink/CommonLink";
 import { BreakpointProvider } from "../context/BreakpointContext";
 import NewsSection from "../components/Section/NewsSection/NewsSection";
-import HolidayCalendar from "../components/Section/HolidayCalendar/HolidayCalendar";
-import CustomCalendar from "../components/CustomCalendar/CustomCalendar";
+import HolidaySection from "../components/Section/HolidaySection/HolidaySection";
 
 export default function HomePage() {
   return (
@@ -22,7 +21,7 @@ export default function HomePage() {
           <NoticeMarqueue />
           <CommonLink />
           <NewsSection />
-          <HolidayCalendar />
+          <HolidaySection />
         </div>
       </BreakpointProvider>
     </>

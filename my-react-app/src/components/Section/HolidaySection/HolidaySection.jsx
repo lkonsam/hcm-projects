@@ -1,8 +1,5 @@
-import { useState } from "react";
-import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { Tooltip } from "react-tooltip";
-import CustomCalendar from "../../CustomCalendar/CustomCalendar";
+import HolidayCalendar from "../../HolidayCalendar/HolidayCalendar";
 
 const holidays = {
   "2025-02-21": { type: "public_holiday", comment: "State Foundation Day" },
@@ -14,9 +11,9 @@ const holidays = {
   "2025-12-25": { type: "public_holiday", comment: "Christmas Day" },
 };
 
-export default function HolidayCalendar() {
+export default function HolidaySection() {
   return (
-    <div className="w-full flex flex-col md:flex-row gap-6 p-6 bg-gray-50 rounded-lg shadow-md">
+    <div className="w-full flex flex-col md:flex-row gap-6 p-6 bg-gray-50  shadow-md">
       {/* Left Section */}
       <div className="md:w-1/2 p-6 bg-white shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -37,7 +34,7 @@ export default function HolidayCalendar() {
           Holiday Calendar
         </h2>
         <div className="w-full flex justify-center">
-          <CustomCalendar holidays={holidays} />
+          <HolidayCalendar holidays={holidays} />
         </div>
       </div>
     </div>
