@@ -65,38 +65,41 @@ export default function HolidayCalendar({ holidays }) {
         {days.map((day, idx) => {
           const dateString = format(day, "yyyy-MM-dd");
           const holiday = holidays[dateString];
+          const myDay = (
+            <button
+              type="button"
+              // onClick={() => setSelectedDay(day)}
+              className={`
+              flex h-9 w-9 mx-auto items-center justify-center rounded-full
+              ${
+                holiday
+                  ? holiday.type === "public_holiday"
+                    ? "bg-red-200"
+                    : "bg-yellow-200"
+                  : ""
+              }
+              hover:bg-gray-200 transition
+            `}
+            >
+              <time dateTime={dateString}>{format(day, "d")}</time>
+            </button>
+          );
 
           return (
             <div
               key={dateString}
               className={`${idx === 0 && colStartClasses[getDay(day)]} py-1.5`}
             >
-              <button
-                type="button"
-                // onClick={() => setSelectedDay(day)}
-                className={`
-                        flex h-9 w-9 mx-auto items-center justify-center rounded-full
-                        ${
-                          holiday
-                            ? holiday.type === "public_holiday"
-                              ? "bg-red-200"
-                              : "bg-yellow-200"
-                            : ""
-                        }
-                        hover:bg-gray-200 transition
-                      `}
-              >
-                {holiday ? (
-                  <ShowHoliday
-                    comment={holiday.comment}
-                    id={`tooltip-${dateString}`}
-                  >
-                    <time dateTime={dateString}>{format(day, "d")}</time>
-                  </ShowHoliday>
-                ) : (
-                  <time dateTime={dateString}>{format(day, "d")}</time>
-                )}
-              </button>
+              {holiday ? (
+                <ShowHoliday
+                  comment={holiday.comment}
+                  id={`tooltip-${dateString}`}
+                >
+                  {myDay}
+                </ShowHoliday>
+              ) : (
+                <>{myDay}</>
+              )}
             </div>
           );
         })}
