@@ -9,6 +9,7 @@ import CommonLink from "../components/Section/CommonLink/CommonLink";
 import { BreakpointProvider } from "../context/BreakpointContext";
 import NewsSection from "../components/Section/NewsSection/NewsSection";
 import HolidayCalendar from "../components/Section/HolidayCalendar/HolidayCalendar";
+import CustomCalendar from "../components/CustomCalendar/CustomCalendar";
 
 export default function HomePage() {
   return (
