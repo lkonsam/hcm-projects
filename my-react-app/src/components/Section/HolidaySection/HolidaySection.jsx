@@ -1,17 +1,15 @@
 import "react-calendar/dist/Calendar.css";
 import HolidayCalendar from "../../HolidayCalendar/HolidayCalendar";
-
-const holidays = {
-  "2025-02-21": { type: "public_holiday", comment: "State Foundation Day" },
-  "2025-03-08": { type: "restricted_holiday", comment: "Women's Day" },
-  "2025-04-14": { type: "public_holiday", comment: "Ambedkar Jayanti" },
-  "2025-05-01": { type: "public_holiday", comment: "Labour Day" },
-  "2025-08-15": { type: "public_holiday", comment: "Independence Day" },
-  "2025-10-02": { type: "public_holiday", comment: "Gandhi Jayanti" },
-  "2025-12-25": { type: "public_holiday", comment: "Christmas Day" },
-};
+import { fetchHolidays } from "../../../api/api";
+import { useEffect, useState } from "react";
 
 export default function HolidaySection() {
+  const [holidays, setHolidays] = useState([]);
+
+  useEffect(() => {
+    fetchHolidays().then((data) => setHolidays(data));
+  }, []);
+
   return (
     <div className="w-full flex flex-col md:flex-row gap-6 p-6 bg-gray-50  shadow-md">
       {/* Left Section */}
@@ -34,7 +32,7 @@ export default function HolidaySection() {
           Holiday Calendar
         </h2>
         <div className="w-full flex justify-center">
-          <HolidayCalendar holidays={holidays} />
+          {holidays && <HolidayCalendar holidays={holidays} />}
         </div>
       </div>
     </div>

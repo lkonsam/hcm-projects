@@ -427,3 +427,51 @@ export async function fetchNews() {
   ];
   return data;
 }
+
+export async function fetchHolidays() {
+  const data = {
+    "2025-02-21": { type: "public_holiday", comment: "State Foundation Day" },
+    "2025-03-08": { type: "restricted_holiday", comment: "Women's Day" },
+    "2025-04-14": { type: "public_holiday", comment: "Ambedkar Jayanti" },
+    "2025-05-01": { type: "public_holiday", comment: "Labour Day" },
+    "2025-08-15": { type: "public_holiday", comment: "Independence Day" },
+    "2025-10-02": { type: "public_holiday", comment: "Gandhi Jayanti" },
+    "2025-12-25": { type: "public_holiday", comment: "Christmas Day" },
+  };
+
+  return data;
+}
+export async function fetchJudges() {
+  const data = [
+    {
+      judge_id: 1,
+      name: "D. Krishnakumar",
+      title: "Hon'ble Mr. Justice",
+      post: "Chief Justice",
+      image: "/Judges/justice_1.png",
+    },
+    {
+      judge_id: 2,
+      name: "Ahanthem Bimol Singh",
+      title: "Hon'ble Mr. Justice",
+      post: "Justice",
+      image: "/Judges/justice_2.png",
+    },
+    {
+      judge_id: 3,
+      name: "A. Guneshwar Sharma",
+      title: "Hon'ble Mr. Justice",
+      post: "Justice",
+      image: "/Judges/justice_3.jpg",
+    },
+    {
+      judge_id: 4,
+      name: "Golmei Gaiphulshillu Kabui",
+      title: "Hon'ble Mrs. Justice",
+      post: "Justice",
+      image: "/Judges/justice_4.jpg",
+    },
+  ];
+
+  return data;
+}
