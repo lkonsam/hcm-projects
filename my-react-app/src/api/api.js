@@ -475,3 +475,33 @@ export async function fetchJudges() {
 
   return data;
 }
+
+export async function fetchGovtLinks() {
+  const data = [
+    {
+      img: "/Clients/client-1.png",
+      link: "#",
+    },
+    {
+      img: "/Clients/client-2.png",
+      link: "#",
+    },
+    {
+      img: "/Clients/client-3.png",
+      link: "#",
+    },
+    {
+      img: "/Clients/client-4.png",
+      link: "#",
+    },
+    {
+      img: "/Clients/client-5.png",
+      link: "#",
+    },
+    {
+      img: "/Clients/client-6.png",
+      link: "#",
+    },
+  ];
+  return data;
+}

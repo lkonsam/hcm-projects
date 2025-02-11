@@ -12,6 +12,7 @@ import HolidaySection from "../components/Section/HolidaySection/HolidaySection"
 import JudgeSection from "../components/Section/JudgeSection/JudgeSection";
 import FooterSection from "../components/Section/FooterSection/FooterSection";
 import ContactUs from "../components/Section/ContactUs/ContactUs";
+import GovtIconSection from "../components/Section/GovtIconSection/GovtIconSection";
 
 export default function HomePage() {
   return (
@@ -28,6 +29,7 @@ export default function HomePage() {
           <JudgeSection />
           <ContactUs />
         </div>
+        <GovtIconSection />
         <FooterSection />
       </BreakpointProvider>
     </>
