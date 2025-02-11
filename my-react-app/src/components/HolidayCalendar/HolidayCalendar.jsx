@@ -17,7 +17,7 @@ import {
 } from "date-fns";
 import { Tooltip } from "react-tooltip";
 
-let colStartClasses = [
+const colStartClasses = [
   "",
   "col-start-2",
   "col-start-3",
@@ -39,23 +39,23 @@ function ShowHoliday({ children, comment, id }) {
 }
 
 export default function HolidayCalendar({ holidays }) {
-  let today = startOfToday();
-  // let [selectedDay, setSelectedDay] = useState(today);
-  let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
+  const today = startOfToday();
+  // const [selectedDay, setSelectedDay] = useState(today);
+  const [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
   let firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
 
-  let days = eachDayOfInterval({
+  const days = eachDayOfInterval({
     start: firstDayCurrentMonth,
     end: endOfMonth(firstDayCurrentMonth),
   });
 
   function previousMonth() {
-    let firstDayPrevMonth = add(firstDayCurrentMonth, { months: -1 });
+    const firstDayPrevMonth = add(firstDayCurrentMonth, { months: -1 });
     setCurrentMonth(format(firstDayPrevMonth, "MMM-yyyy"));
   }
 
   function nextMonth() {
-    let firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
+    const firstDayNextMonth = add(firstDayCurrentMonth, { months: 1 });
     setCurrentMonth(format(firstDayNextMonth, "MMM-yyyy"));
   }
 
