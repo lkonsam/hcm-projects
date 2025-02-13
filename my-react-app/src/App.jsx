@@ -1,3 +1,4 @@
+/** App.jsx */
 import { SnackbarProvider } from "notistack";
 import { Outlet } from "react-router-dom";
 

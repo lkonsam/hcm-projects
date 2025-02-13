@@ -16,7 +16,6 @@ export default function NewsSection() {
 
   useEffect(() => {
     const limit = { xs: 1, sm: 2, md: 3 }[breakpoint] || 4;
-    console.log(limit);
     setSlideNumber(limit);
   }, [breakpoint]);
 

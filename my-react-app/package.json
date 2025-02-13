@@ -26,6 +26,7 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.1.5",
     "react-tooltip": "^5.28.0",
+    "react-translate": "^7.0.1",
     "swiper": "^11.2.2",
     "tailwindcss": "^4.0.3"
   },

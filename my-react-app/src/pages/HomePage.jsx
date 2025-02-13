@@ -1,3 +1,4 @@
+/** HomePage.jsx */
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -18,7 +19,7 @@ export default function HomePage() {
   return (
     <>
       <BreakpointProvider>
-        <div className="bg-orange-50">
+        <div className="bg-orange-50 text-gray-800 dark:bg-gray-800  dark:text-gray-100">
           <TopHeader />
         </div>
         <div className="w-full max-w-9/10 mx-auto">

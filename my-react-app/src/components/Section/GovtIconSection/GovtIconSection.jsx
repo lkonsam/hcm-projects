@@ -14,7 +14,6 @@ export default function GovtIconSection() {
 
   useEffect(() => {
     const limit = { xs: 2, sm: 3, md: 4 }[breakpoint] || 4;
-    console.log(limit);
     setSlideNumber(limit);
   }, [breakpoint]);
 
