@@ -21,9 +21,9 @@ export default function NoticeMarqueue() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full py-6 my-1 rounded bg-gray-100">
+    <div className="flex flex-col items-center w-full py-6 my-1">
       <div className="grid grid-cols-10 items-center">
-        <div className="col-span-2 text-lg font-bold border-secondary border-r-4 text-right pr-6">
+        <div className="col-span-2 text-lg font-bold border-secondary border-r-4 border-gray-400 text-right pr-6">
           What's New
         </div>
         <div

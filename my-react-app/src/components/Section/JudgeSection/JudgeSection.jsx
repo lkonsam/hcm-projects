@@ -8,41 +8,6 @@ import "swiper/css/pagination";
 import { useBreakpoint } from "../../../context/BreakpointContext";
 import { fetchJudges } from "../../../api/api";
 
-/**
- * 
- * //dummy data
- *  const data = [
-    {
-      judge_id: 1,
-      name: "D. Krishnakumar",
-      title: "Hon'ble Mr. Justice",
-      post: "Chief Justice",
-      image: "/Judges/justice_1.png",
-    },
-    {
-      judge_id: 2,
-      name: "Ahanthem Bimol Singh",
-      title: "Hon'ble Mr. Justice",
-      post: "Justice",
-      image: "/Judges/justice_2.png",
-    },
-    {
-      judge_id: 3,
-      name: "A. Guneshwar Sharma",
-      title: "Hon'ble Mr. Justice",
-      post: "Justice",
-      image: "/Judges/justice_3.jpg",
-    },
-    {
-      judge_id: 4,
-      name: "Golmei Gaiphulshillu Kabui",
-      title: "Hon'ble Mrs. Justice",
-      post: "Justice",
-      image: "/Judges/justice_4.jpg",
-    },
-  ];
- */
-
 export default function JudgeSection() {
   const [judges, setJudges] = useState([]);
   const [swiperInstance, setSwiperInstance] = useState(null);
@@ -61,7 +26,7 @@ export default function JudgeSection() {
 
   return (
     <div
-      className="w-full py-10 bg-gray-100"
+      className="w-full py-10 "
       onMouseEnter={() => swiperInstance?.autoplay.stop()}
       onMouseLeave={() => swiperInstance?.autoplay.start()}
     >

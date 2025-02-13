@@ -26,12 +26,12 @@ export default function NewsSection() {
 
   return (
     <div
-      className="w-full py-10 bg-gray-100"
+      className="w-full py-10"
       onMouseEnter={() => swiperInstance?.autoplay.stop()}
       onMouseLeave={() => swiperInstance?.autoplay.start()}
     >
       <div className="w-full px-4">
-        <h2 className="w-full  text-3xl font-bold text-gray-800 mb-6 text-center border-b border-gray-300 pb-4">
+        <h2 className="w-full  text-3xl font-bold text-gray-800 mb-6 text-center border-b  pb-4">
           Latest News
         </h2>
         <Swiper

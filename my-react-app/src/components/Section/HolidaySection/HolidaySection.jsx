@@ -11,7 +11,7 @@ export default function HolidaySection() {
   }, []);
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-6 p-6 bg-gray-50  shadow-md">
+    <div className="w-full flex flex-col md:flex-row gap-6 p-6 shadow-md">
       {/* Left Section */}
       <div className="md:w-1/2 p-6 bg-white shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">

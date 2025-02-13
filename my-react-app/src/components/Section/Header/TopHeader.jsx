@@ -1,6 +1,6 @@
 export default function TopHeader() {
   return (
-    <div className="flex flex-wrap justify-between px-6 py-2 bg-gray-100">
+    <div className="flex flex-wrap justify-between px-6 py-2">
       <span>
         <button className="m-2 hover:text-[var(--color-brown-0)]">
           Sitemap
@@ -28,6 +28,15 @@ export default function TopHeader() {
         <button className="m-2 hover:text-[var(--color-brown-0)]">-A</button>|
         <button className="m-2 hover:text-[var(--color-brown-0)]">A</button>|
         <button className="m-2 hover:text-[var(--color-brown-0)]">+A</button>
+      </span>
+      <span>
+        <button className="m-2 hover:text-[var(--color-brown-0)]">
+          Dark Mode
+        </button>
+        |
+        <button className="m-2 hover:text-[var(--color-brown-0)]">
+          Light Mode
+        </button>
       </span>
       <span>
         <button className="m-2 hover:text-[var(--color-brown-0)]">

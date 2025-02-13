@@ -106,6 +106,24 @@ export async function fetchFooter() {
         link: "/contact",
       },
     ],
+    footer4: [
+      {
+        title: "About Us",
+        link: "/about",
+      },
+      {
+        title: "Contact Us",
+        link: "/contact",
+      },
+      {
+        title: "About Us",
+        link: "/about",
+      },
+      {
+        title: "Contact Us",
+        link: "/contact",
+      },
+    ],
     copyright: "Copyright © 2023 High Court of Manipur. All rights reserved.",
   };
   return footerData;

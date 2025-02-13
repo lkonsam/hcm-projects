@@ -18,16 +18,35 @@ export default function HomePage() {
   return (
     <>
       <BreakpointProvider>
-        <TopHeader />
+        <div className="bg-orange-50">
+          <TopHeader />
+        </div>
         <div className="w-full max-w-9/10 mx-auto">
-          <Header />
-          <Hero />
-          <NoticeMarqueue />
-          <CommonLink />
-          <NewsSection />
-          <HolidaySection />
-          <JudgeSection />
-          <ContactUs />
+          <div className="">
+            <Header />
+          </div>
+          <div className="bg-orange-50">
+            <Hero />
+          </div>
+          <div className="bg-orange-50">
+            <NoticeMarqueue />
+          </div>
+
+          <div className="bg-orange-100">
+            <CommonLink />
+          </div>
+          <div className="bg-orange-50">
+            <NewsSection />
+          </div>
+          <div className="bg-orange-100">
+            <HolidaySection />
+          </div>
+          <div className="bg-orange-50">
+            <JudgeSection />
+          </div>
+          <div className="bg-orange-100">
+            <ContactUs />
+          </div>
         </div>
         <GovtIconSection />
         <FooterSection />

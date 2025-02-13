@@ -20,7 +20,7 @@ const contactData = [
 
 export default function ContactUs() {
   return (
-    <div className="w-full flex flex-col md:flex-row gap-6 p-6 bg-gray-50 shadow-md">
+    <div className="w-full flex flex-col md:flex-row gap-6 p-6  shadow-md">
       {/* Left Section - Contact Details */}
       <div className="md:w-1/2 p-6 bg-white shadow-lg rounded-lg">
         {contactData.map((section, index) => (

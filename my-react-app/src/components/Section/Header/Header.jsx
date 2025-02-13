@@ -69,7 +69,10 @@ function MainMenu({ menu }) {
     <>
       {menu.map((item, ind) => (
         <li key={ind} className="md:m-2">
-          <Link to={item.url} className="hover:text-[var(--color-brown-0)]">
+          <Link
+            to={item.url}
+            className="hover:text-[var(--color-brown-0)] hover:border-b-4"
+          >
             {item.title}
           </Link>
         </li>
