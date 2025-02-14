@@ -25,7 +25,7 @@ function NavLink({ menu }) {
   return (
     <nav className="flex items-center justify-between py-4">
       {/* Logo Section */}
-      <div className="flex items-center">
+      <div className="flex items-center ps-2">
         <Logo />
       </div>
 
@@ -71,7 +71,7 @@ function MainMenu({ menu }) {
         <li key={ind} className="md:m-2">
           <Link
             to={item.url}
-            className="hover:text-[var(--color-brown-0)] hover:border-b-4"
+            className="font-bold md:text-[var(--color-brown-0)] hover:border-b-4"
           >
             {item.title}
           </Link>

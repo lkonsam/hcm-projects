@@ -5,9 +5,11 @@ import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <SnackbarProvider>
-        <Outlet />
-      </SnackbarProvider>
+      <div className="w-full bg-gray-50">
+        <SnackbarProvider>
+          <Outlet />
+        </SnackbarProvider>
+      </div>
     </>
   );
 }
