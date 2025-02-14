@@ -1,32 +1,24 @@
-import { useState } from "react";
-import { useTranslation } from "../../../context/TranslationContext";
+import { useEffect } from "react";
+import { useTheme } from "../../../context/ThemeContext";
 
 export default function TopHeader() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [fontSize, setFontSize] = useState(16); // Default font size in px
-  const { changeLanguage } = useTranslation();
+  const { changeLanguage, isDarkMode, toggleTheme, adjustFontSize } =
+    useTheme();
 
-  // Handle dark mode toggle
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle("dark", !isDarkMode);
-  };
-
-  // Handle font size adjustments
-  const adjustFontSize = (adjustment) => {
-    if (adjustment === 0) {
-      setFontSize(16);
-      document.documentElement.style.fontSize = `16px`;
-    } else {
-      setFontSize((prevSize) =>
-        Math.min(24, Math.max(12, prevSize + adjustment))
-      );
-      document.documentElement.style.fontSize = `${fontSize + adjustment}px`;
-    }
-  };
+  useEffect(() => {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        includedLanguages: "en,hi",
+      },
+      "google_translate_element"
+    );
+  }, []);
 
   return (
-    <div className="flex flex-wrap justify-between px-6 py-2  ">
+    <div className="flex flex-wrap justify-between px-6 py-2">
+      <div id="google_translate_element" className="hidden"></div>
+
       {/* Sitemap, Contact Us, Feedback */}
       <span>
         <button className="m-2 hover:text-brown-600">Sitemap</button>|
@@ -79,7 +71,6 @@ export default function TopHeader() {
 
       {/* Language Toggle */}
       <span>
-        <div id="google_translate_element" className="hidden"></div>
         <button onClick={() => changeLanguage("en")} className="m-2">
           English
         </button>
