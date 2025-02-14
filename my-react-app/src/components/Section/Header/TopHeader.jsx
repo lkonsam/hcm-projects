@@ -1,24 +1,11 @@
-import { useEffect } from "react";
 import { useTheme } from "../../../context/ThemeContext";
 
 export default function TopHeader() {
   const { changeLanguage, isDarkMode, toggleTheme, adjustFontSize } =
     useTheme();
 
-  useEffect(() => {
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: "en",
-        includedLanguages: "en,hi",
-      },
-      "google_translate_element"
-    );
-  }, []);
-
   return (
     <div className="flex flex-wrap justify-between px-6 py-2">
-      <div id="google_translate_element" className="hidden"></div>
-
       {/* Sitemap, Contact Us, Feedback */}
       <span>
         <button className="m-2 hover:text-brown-600">Sitemap</button>|

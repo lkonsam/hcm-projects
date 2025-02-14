@@ -69,7 +69,7 @@ function NewsCard({ ele }) {
             key={index}
             className="border-b border-gray-300 pb-2 last:border-none"
           >
-            <Link to={`/news/view/${item.news_id}`} className="block">
+            <Link to={`/news/view/?s=${item.news_id}`} className="block">
               <h5 className="text-xs text-gray-500">{item.date}</h5>
               <h3 className="text-sm font-medium text-gray-800 hover:text-blue-600">
                 {/* {item.body.slice(0, 80)}... */} {item.body}
@@ -79,7 +79,7 @@ function NewsCard({ ele }) {
         ))}
       </ul>
       <Link
-        to={`/news/list/${ele?.header_id}`}
+        to={`/news/list/?s=${ele?.header_id}`}
         className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700"
       >
         Read More

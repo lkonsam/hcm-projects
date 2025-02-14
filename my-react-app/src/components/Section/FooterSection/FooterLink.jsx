@@ -5,7 +5,7 @@ export default function FooterLink({ label, link }) {
   return (
     <Link
       to={link}
-      className="flex items-center text-gray-800   no-underline  hover:text-amber-900"
+      className="flex items-center text-white   no-underline  hover:underline"
     >
       <MdOutlineKeyboardArrowRight className="text-lg" />
       {label}

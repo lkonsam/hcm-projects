@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import HomePage from "./pages/HomePage.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
+import NewsList from "./pages/NewsList.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "/news/list",
+        element: <NewsList />,
       },
     ],
   },

@@ -445,6 +445,21 @@ export async function fetchNews() {
   ];
   return data;
 }
+export async function fetchNewsList(headerId) {
+  const data = Array.from({ length: 35 }, (_, index) => ({
+    news_id: index + 1,
+    body: `This is a news article body for news item ${
+      index + 1
+    }. It contains important details about event ${index + 1}.`,
+    date: new Date(2023, Math.floor(index / 3), (index % 30) + 1)
+      .toISOString()
+      .slice(0, 10), // Generates different dates
+    pdf: `https://example.com/pdf/news_${index + 1}.pdf`, // Simulated PDF link
+    title: `News Title ${index + 1}`, // Simulated title
+  }));
+
+  return data;
+}
 
 export async function fetchHolidays() {
   const data = {

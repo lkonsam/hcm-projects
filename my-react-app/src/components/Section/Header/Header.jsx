@@ -12,7 +12,7 @@ export default function Header() {
   ];
   return (
     <>
-      <header>
+      <header className="md:max-w-9/10 mx-auto">
         <NavLink menu={menu} />
       </header>
     </>
@@ -71,7 +71,7 @@ function MainMenu({ menu }) {
         <li key={ind} className="md:m-2">
           <Link
             to={item.url}
-            className="font-bold md:text-[var(--color-brown-0)] hover:border-b-4"
+            className="text-xl font-bold text-white hover:border-b-4"
           >
             {item.title}
           </Link>

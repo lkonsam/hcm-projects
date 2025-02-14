@@ -21,6 +21,37 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("preferredLanguage", lang);
   };
 
+  useEffect(() => {
+    // Check if the script is already loaded
+    if (!window.googleTranslateScriptLoaded && !window.google?.translate) {
+      const script = document.createElement("script");
+      script.src =
+        "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.id = "google-translate-script"; // Optional: add an ID for tracking
+      script.async = true;
+      document.body.appendChild(script);
+
+      // Define the global callback
+      window.googleTranslateElementInit = () => {
+        new window.google.translate.TranslateElement(
+          {
+            pageLanguage: "en",
+            includedLanguages: "en,hi",
+          },
+          "google_translate_element"
+        );
+      };
+
+      // Mark the script as loaded
+      window.googleTranslateScriptLoaded = true;
+
+      return () => {
+        // Cleanup script if needed
+        document.body.removeChild(script);
+      };
+    }
+  }, []);
+
   const setLanguageInGoogleTranslate = (lang) => {
     const select = document.querySelector("#google_translate_element select");
     if (!select) return;
@@ -47,7 +78,7 @@ export const ThemeProvider = ({ children }) => {
 
   useEffect(() => {
     // Apply the saved theme and font size on mount
-    document.body.classList.toggle("dark", isDarkMode);
+    document.documentElement.classList.toggle("dark", isDarkMode); // Use <html> tag
     document.documentElement.style.fontSize = `${fontSize}px`;
   }, [isDarkMode, fontSize]);
 
@@ -62,6 +93,7 @@ export const ThemeProvider = ({ children }) => {
         adjustFontSize,
       }}
     >
+      <div id="google_translate_element" className="hidden"></div>
       {children}
     </ThemeContext.Provider>
   );
