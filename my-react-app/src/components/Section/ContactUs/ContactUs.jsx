@@ -22,7 +22,7 @@ export default function ContactUs() {
   return (
     <div className="w-full flex flex-col md:flex-row gap-6 p-6  shadow-md">
       {/* Left Section - Contact Details */}
-      <div className="md:w-1/2 p-6 bg-white shadow-lg rounded-lg">
+      <div className="md:w-1/2 p-6 bg-white shadow-lg rounded-lg dark:text-gray-800">
         {contactData.map((section, index) => (
           <div key={index}>
             <h2 className="text-xl font-semibold mb-4">{section.header}</h2>

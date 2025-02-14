@@ -17,7 +17,7 @@ export default function HolidaySection() {
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
           High Court of Manipur
         </h2>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-800 leading-relaxed">
           The High Court of Manipur was established on .... write some summary
           here.
         </p>

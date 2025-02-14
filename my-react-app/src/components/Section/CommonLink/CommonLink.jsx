@@ -52,7 +52,10 @@ export default function CommonLink() {
 function CommonLinkCard({ icon, title, link }) {
   return (
     <Link to={link} className="block text-inherit no-underline">
-      <div className="flex flex-col items-center justify-center p-4 border border-secondary rounded-lg bg-gray-100 transition-all duration-300 hover:shadow-md hover:bg-gray-200 h-[135px]">
+      <div
+        className="flex flex-col items-center justify-center p-4 border border-secondary rounded-lg bg-gray-100
+      dark:bg-white dark:text-gray-800 transition-all duration-300 hover:shadow-md hover:bg-gray-200 h-[135px]"
+      >
         <img src={icon} alt={title} className="w-8 h-8" />
         <p className="text-sm text-center mt-2">{title}</p>
       </div>

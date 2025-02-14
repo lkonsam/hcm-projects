@@ -15,23 +15,23 @@ export default function HomePage() {
   return (
     <>
       <div className="w-full md:max-w-9/10 mx-auto  dark:bg-gray-900 dark:text-white">
-        <div className="bg-gray-50">
+        <div className="bg-gray-50 dark:bg-gray-800  dark:text-gray-100 ">
           <Hero />
           <NoticeMarqueue />
         </div>
-        <div className="bg-orange-100">
+        <div className="bg-orange-100 dark:bg-gray-900 dark:text-white">
           <CommonLink />
         </div>
-        <div className="bg-orange-50">
+        <div className="bg-orange-50 dark:bg-gray-800  dark:text-gray-100">
           <NewsSection />
         </div>
-        <div className="bg-orange-100">
+        <div className="bg-orange-100 dark:bg-gray-900 dark:text-white">
           <HolidaySection />
         </div>
-        <div className="bg-orange-50">
+        <div className="bg-orange-50 dark:bg-gray-800  dark:text-gray-100">
           <JudgeSection />
         </div>
-        <div className="bg-orange-100">
+        <div className="bg-orange-100 dark:bg-gray-900">
           <ContactUs />
         </div>
       </div>

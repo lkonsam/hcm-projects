@@ -65,7 +65,7 @@ export default function HolidayCalendar({ holidays }) {
       <div className="flex items-center justify-around">
         <button
           onClick={previousMonth}
-          className="p-2 text-gray-500 hover:text-gray-700"
+          className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-800"
         >
           <MdKeyboardDoubleArrowLeft className="w-5 h-5" />
         </button>
@@ -74,14 +74,14 @@ export default function HolidayCalendar({ holidays }) {
         </h2>
         <button
           onClick={nextMonth}
-          className="p-2 text-gray-500 hover:text-gray-700"
+          className="p-2 text-gray-500 dark:text-gray-800 hover:text-gray-700"
         >
           <MdKeyboardDoubleArrowRight className="w-5 h-5" />
         </button>
       </div>
 
       {/* Days of the week */}
-      <div className="grid grid-cols-7 mt-6 text-xs text-center text-gray-500">
+      <div className="grid grid-cols-7 mt-6 text-xs text-center text-gray-500 dark:text-gray-900">
         <div>Sun</div> <div>Mon</div> <div>Tue</div> <div>Wed</div>
         <div>Thu</div> <div>Fri</div> <div>Sat</div>
       </div>
@@ -119,7 +119,9 @@ export default function HolidayCalendar({ holidays }) {
                   hover:bg-gray-200 transition relative
                 `}
               >
-                <time dateTime={dateString}>{format(day, "d")}</time>
+                <time dateTime={dateString} className="dark:text-gray-900">
+                  {format(day, "d")}
+                </time>
               </button>
 
               {/* Tooltip for holidays */}
@@ -134,14 +136,14 @@ export default function HolidayCalendar({ holidays }) {
       </div>
 
       {/* Legend */}
-      <div className="flex items-center mt-6 space-x-4">
+      <div className="flex items-center justify-center mt-6 space-x-4">
         <div className="flex items-center space-x-2">
-          <span className="w-3 h-3 bg-red-300 rounded-full"></span>
-          <span>Public Holiday</span>
+          <span className="w-3 h-3 bg-red-300 rounded-full "></span>
+          <span className="dark:text-gray-900">Public Holiday</span>
         </div>
         <div className="flex items-center space-x-2">
           <span className="w-3 h-3 bg-yellow-300 rounded-full"></span>
-          <span>Restricted Holiday</span>
+          <span className="dark:text-gray-900">Restricted Holiday</span>
         </div>
       </div>
     </div>

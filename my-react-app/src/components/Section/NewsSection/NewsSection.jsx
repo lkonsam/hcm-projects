@@ -59,8 +59,8 @@ export default function NewsSection() {
 
 function NewsCard({ ele }) {
   return (
-    <div className="bg-white shadow-lg rounded-xl overflow-hidden p-5  h-full">
-      <h3 className=" font-bold text-amber-700 mb-3 border-b border-gray-300 pb-2">
+    <div className="bg-white  shadow-lg rounded-xl overflow-hidden p-5  h-full">
+      <h3 className=" font-bold text-amber-700 dark:text-gray-800 mb-3 border-b border-gray-300 pb-2">
         {ele?.header}
       </h3>
       <ul className="space-y-3 h-[400px] overflow-hidden">
