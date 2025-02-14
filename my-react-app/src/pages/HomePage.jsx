@@ -19,20 +19,15 @@ export default function HomePage() {
   return (
     <>
       <BreakpointProvider>
-        <div className="bg-orange-50 text-gray-800 dark:bg-gray-800  dark:text-gray-100">
+        <div className="bg-orange-100 text-gray-800 dark:bg-gray-800  dark:text-gray-100">
           <TopHeader />
         </div>
         <div className="w-full md:max-w-9/10 mx-auto">
-          <div className="bg-gray-50">
+          <div className="bg-orange-50">
             <Header />
-          </div>
-          <div className="bg-orange-50">
             <Hero />
-          </div>
-          <div className="bg-orange-50">
             <NoticeMarqueue />
           </div>
-
           <div className="bg-orange-100">
             <CommonLink />
           </div>

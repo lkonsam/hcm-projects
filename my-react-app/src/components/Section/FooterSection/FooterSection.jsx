@@ -11,7 +11,7 @@ export default function FooterSection() {
   }, []);
 
   return (
-    <div className="bg-orange-100 text-gray-800 py-10">
+    <div className="bg-orange-200 text-gray-800 py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
           <div className="flex flex-col space-y-4 col-span-2 md:px-4">
