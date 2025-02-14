@@ -231,17 +231,17 @@ export async function fetchNews() {
       data: [
         {
           news_id: 1,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          body: "We are actively recruiting for a varietydesigners, and more. Please check our latest job openings for more information.",
           date: "2023-05-12",
         },
         {
           news_id: 2,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          body: "We are actipenings for more information.",
           date: "2023-05-12",
         },
         {
           news_id: 3,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          body: "We are activelrs, and more. Please check our latest job openings for more information.",
           date: "2023-05-12",
         },
         {
@@ -262,12 +262,12 @@ export async function fetchNews() {
       data: [
         {
           news_id: 6,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          body: "We are actively recruiting for a variety of positions, includting for a variety of positions, includting for a variety of positions, includting for a variety of positions, includting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
           date: "2023-05-12",
         },
         {
           news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
+          body: "We are actively recruiting for a variety of positions, including software engineers, graphic dess for more information.",
           date: "2023-05-12",
         },
         {

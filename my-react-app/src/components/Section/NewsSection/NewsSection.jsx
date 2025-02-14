@@ -42,7 +42,6 @@ export default function NewsSection() {
           spaceBetween={20}
           pagination={{ clickable: true }}
           //   navigation={true}
-          className="pb-10"
           style={{
             paddingBottom: 40,
           }}
@@ -60,20 +59,20 @@ export default function NewsSection() {
 
 function NewsCard({ ele }) {
   return (
-    <div className="bg-white shadow-lg rounded-xl overflow-hidden p-5 transition-transform transform hover:scale-101">
-      <h3 className="text-xl font-semibold text-gray-700 mb-3 border-b border-gray-300 pb-2">
+    <div className="bg-white shadow-lg rounded-xl overflow-hidden p-5  h-full">
+      <h3 className=" font-bold text-amber-700 mb-3 border-b border-gray-300 pb-2">
         {ele?.header}
       </h3>
-      <ul className="space-y-3">
+      <ul className="space-y-3 h-[400px] overflow-hidden">
         {ele?.data.slice(0, 3).map((item, index) => (
           <li
             key={index}
             className="border-b border-gray-300 pb-2 last:border-none"
           >
             <Link to={`/news/view/${item.news_id}`} className="block">
-              <h5 className="text-sm text-gray-500">{item.date}</h5>
-              <h3 className="text-md font-medium text-gray-800 hover:text-blue-600">
-                {item.body.slice(0, 80)}...
+              <h5 className="text-xs text-gray-500">{item.date}</h5>
+              <h3 className="text-sm font-medium text-gray-800 hover:text-blue-600">
+                {/* {item.body.slice(0, 80)}... */} {item.body}
               </h3>
             </Link>
           </li>
