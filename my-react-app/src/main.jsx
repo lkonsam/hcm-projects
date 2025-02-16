@@ -7,6 +7,8 @@ import "./index.css";
 import HomePage from "./pages/HomePage.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
 import NewsList from "./pages/NewsList.jsx";
+import GalleryPage from "./pages/GalleryPage.jsx";
+import GalleryImagesPage from "./pages/GalleryImagesPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/news/list",
         element: <NewsList />,
+      },
+      {
+        path: "/gallery/list",
+        element: <GalleryPage />,
+      },
+      {
+        path: "/gallery/images",
+        element: <GalleryImagesPage />,
       },
     ],
   },

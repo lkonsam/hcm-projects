@@ -334,3 +334,34 @@ export async function fetchGovtLinks() {
   ];
   return data;
 }
+
+function generateImageData(start, number, multiplier) {
+  start = start * multiplier;
+  const data = Array.from({ length: number }, (_, index) => ({
+    id: start + index,
+    img: `/Gallery/image-${start + index + 1}.jpg`,
+    caption: `Image ${start + index + 1}`,
+    date: new Date(2023, Math.floor(index / 3), (index % 30) + 1),
+  }));
+  return data;
+}
+export async function fetchGalleries() {
+  const data = generateImageData(1, 5, 1);
+  return data;
+}
+
+export async function fetchGalleryImages(id) {
+  // console.log(id);
+  const data = generateImageData(id, 10, 10);
+  return data;
+}
+export async function fetchMenu() {
+  // console.log(id);
+  const data = [
+    { title: "Home", url: "/" },
+    { title: "About", url: "/" },
+    { title: "Gallery", url: "/gallery/list" },
+    { title: "Contact", url: "/" },
+  ];
+  return data;
+}

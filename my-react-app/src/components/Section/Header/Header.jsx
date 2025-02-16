@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import Logo from "../../Logo/Logo";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { fetchMenu } from "../../../api/api";
 
 export default function Header() {
-  const menu = [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/" },
-    { title: "Services", url: "/" },
-    { title: "Contact", url: "/" },
-  ];
+  const [menu, setMenu] = useState([]);
+
+  useEffect(() => {
+    fetchMenu().then((data) => setMenu(data));
+  }, []);
+
   return (
     <>
       <header className="md:max-w-9/10 mx-auto">
