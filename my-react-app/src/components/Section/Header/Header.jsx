@@ -24,7 +24,7 @@ function NavLink({ menu }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center justify-between py-4 mb-4">
+    <nav className="flex items-center justify-between px-4 md:px-0 py-4 mb-4">
       {/* Logo Section */}
       <div className="flex items-center ps-2">
         <Logo />
