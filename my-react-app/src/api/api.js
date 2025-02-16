@@ -446,7 +446,7 @@ export async function fetchNews() {
   return data;
 }
 export async function fetchNewsList(headerId) {
-  const data = Array.from({ length: 35 }, (_, index) => ({
+  const data = Array.from({ length: 165 }, (_, index) => ({
     news_id: index + 1,
     body: `This is a news article body for news item ${
       index + 1
