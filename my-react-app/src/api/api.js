@@ -21,6 +21,24 @@ export async function fetchHeroData() {
 
 //Data in the Footer Section
 export async function fetchFooter() {
+  const data = [
+    {
+      title: "About Us",
+      link: "/about",
+    },
+    {
+      title: "Contact Us",
+      link: "/contact",
+    },
+    {
+      title: "About Us",
+      link: "/about",
+    },
+    {
+      title: "Contact Us",
+      link: "/contact",
+    },
+  ];
   const footerData = {
     socialMedia: [
       {
@@ -40,90 +58,10 @@ export async function fetchFooter() {
         link: "https://www.instagram.com/",
       },
     ],
-    footer1: [
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-    ],
-    footer2: [
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-    ],
-    footer3: [
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-    ],
-    footer4: [
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-      {
-        title: "About Us",
-        link: "/about",
-      },
-      {
-        title: "Contact Us",
-        link: "/contact",
-      },
-    ],
+    footer1: data,
+    footer2: data,
+    footer3: data,
+    footer4: data,
     copyright: "Copyright © 2023 High Court of Manipur. All rights reserved.",
   };
   return footerData;
@@ -228,237 +166,94 @@ export async function fetchNews() {
     {
       header_id: 1,
       header: "Recruitment",
-      data: [
-        {
-          news_id: 1,
-          body: "We are actively recruiting for a varietydesigners, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 2,
-          body: "We are actipenings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 3,
-          body: "We are activelrs, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 4,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 5,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
     {
       header_id: 2,
       header: "NEWS/NOTICE/HIGHLIGHTS",
-      data: [
-        {
-          news_id: 6,
-          body: "We are actively recruiting for a variety of positions, includting for a variety of positions, includting for a variety of positions, includting for a variety of positions, includting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic dess for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 8,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 9,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 10,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
     {
       header_id: 2,
       header: "TENDER",
-      data: [
-        {
-          news_id: 6,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 8,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 9,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 10,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
     {
       header_id: 2,
       header: "Lok Adalat",
-      data: [
-        {
-          news_id: 6,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 8,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 9,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 10,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
     {
       header_id: 2,
       header: "BENCH CONSTITUTIONS",
-      data: [
-        {
-          news_id: 6,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 8,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 9,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 10,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
     {
       header_id: 2,
       header: "E-COURTS",
-      data: [
-        {
-          news_id: 6,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 8,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 9,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 10,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
     {
       header_id: 2,
       header: "TRANSFER AND POSTINGS",
-      data: [
-        {
-          news_id: 6,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 7,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 8,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 9,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-        {
-          news_id: 10,
-          body: "We are actively recruiting for a variety of positions, including software engineers, graphic designers, and more. Please check our latest job openings for more information.",
-          date: "2023-05-12",
-        },
-      ],
+      data: generateNews(5),
     },
   ];
   return data;
 }
-export async function fetchNewsList(headerId) {
-  console.log(headerId);
-  const data = Array.from({ length: 165 }, (_, index) => ({
+
+function generateNews(number) {
+  const randomWords = [
+    "technology",
+    "sports",
+    "politics",
+    "science",
+    "economy",
+    "health",
+    "entertainment",
+    "education",
+    "climate",
+    "travel",
+    "history",
+    "culture",
+    "innovation",
+    "research",
+    "discovery",
+    "growth",
+    "security",
+    "adventure",
+    "future",
+    "community",
+  ];
+
+  const getRandomWords = (count) => {
+    const words = [];
+    for (let i = 0; i < count; i++) {
+      const randomIndex = Math.floor(Math.random() * randomWords.length);
+      words.push(randomWords[randomIndex]);
+    }
+    return words.join(" ");
+  };
+
+  const data = Array.from({ length: number }, (_, index) => ({
     news_id: index + 1,
     body: `This is a news article body for news item ${
       index + 1
-    }. It contains important details about event ${index + 1}.`,
+    }. It contains important details about event ${index + 1}. ${getRandomWords(
+      Math.floor(Math.random() * 10) + 5
+    )}`, // Adds 5 random words
     date: new Date(2023, Math.floor(index / 3), (index % 30) + 1)
       .toISOString()
       .slice(0, 10), // Generates different dates
     pdf: `https://example.com/pdf/news_${index + 1}.pdf`, // Simulated PDF link
     title: `News Title ${index + 1}`, // Simulated title
   }));
+  return data;
+}
 
+export async function fetchNewsList(headerId) {
+  console.log(headerId);
+  const data = generateNews(165);
   return data;
 }
 
