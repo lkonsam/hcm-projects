@@ -22,7 +22,12 @@ export default function NewsList() {
       className: "w-1/10",
     },
     { label: "Date", field: "date", sortable: true, className: "w-2/10" },
-    { label: "Body", field: "body", sortable: true, className: "w-5/10" },
+    {
+      label: "Body",
+      field: "body",
+      sortable: true,
+      className: "w-5/10 text-left",
+    },
     { label: "PDF", field: "pdf", sortable: false, className: "w-2/10" },
   ];
 

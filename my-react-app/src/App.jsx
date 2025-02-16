@@ -3,7 +3,6 @@ import { SnackbarProvider } from "notistack";
 import { Outlet } from "react-router-dom";
 import { BreakpointProvider } from "./context/BreakpointContext";
 import TopHeader from "./components/Section/Header/TopHeader";
-import GovtIconSection from "./components/Section/GovtIconSection/GovtIconSection";
 import FooterSection from "./components/Section/FooterSection/FooterSection";
 import Header from "./components/Section/Header/Header";
 

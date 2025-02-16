@@ -103,9 +103,9 @@ export default function Table({ data, headers, className = "" }) {
               <th
                 key={index}
                 onClick={() => header.sortable && handleSort(header.field)}
-                className={`px-4 py-2 border-b ${header.className} ${
+                className={`px-4 py-2 border-b  ${
                   header.sortable ? "cursor-pointer hover:underline" : ""
-                }`}
+                } ${header.className}`}
               >
                 <div className="flex justify-center items-center">
                   <span>{header.label}</span>
@@ -124,7 +124,10 @@ export default function Table({ data, headers, className = "" }) {
           {paginatedData.map((row, index) => (
             <tr key={index}>
               {headers.map((header, fieldIndex) => (
-                <td key={fieldIndex} className="px-4 py-2 border-b text-center">
+                <td
+                  key={fieldIndex}
+                  className={`px-4 py-2 border-b text-center  ${header.className}`}
+                >
                   {header.field === "serial" ? (
                     (currentPage - 1) * itemsPerPage + index + 1
                   ) : header.field === "pdf" && row[header.field] ? (

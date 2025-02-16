@@ -31,7 +31,7 @@ export default function Pagination({
         {pageNumbers.map((page, index) => (
           <span key={index}>
             {page === "..." ? (
-              <span className="px-3 py-1 text-gray-600 dark:text-gray-400">
+              <span className="px-2 py-1 text-gray-600 dark:text-gray-400">
                 ...
               </span>
             ) : (
