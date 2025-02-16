@@ -4,6 +4,7 @@ import NewsList from "../pages/NewsList";
 import GalleryPage from "../pages/GalleryPage";
 import GalleryImagesPage from "../pages/GalleryImagesPage";
 import JudgesPage from "../pages/JudgesPage";
+import FileViewerPage from "../pages/FileViewerPage";
 
 const webrouter = [
   {
@@ -29,6 +30,10 @@ const webrouter = [
       {
         path: "/judges/list",
         element: <JudgesPage />,
+      },
+      {
+        path: "/fileviewer",
+        element: <FileViewerPage />,
       },
     ],
   },

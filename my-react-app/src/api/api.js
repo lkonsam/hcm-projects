@@ -1,4 +1,17 @@
 import judgesData from "./judgesData.json";
+
+//menu link
+export async function fetchMenu() {
+  // console.log(id);
+  const data = [
+    { title: "Home", url: "/" },
+    { title: "About", url: "/judges/list" },
+    { title: "Gallery", url: "/gallery/list" },
+    { title: "Contact", url: "/fileviewer?s=1" },
+  ];
+  return data;
+}
+
 //Data in the Hero section
 export async function fetchHeroData() {
   const heroData = [
@@ -327,13 +340,8 @@ export async function fetchGalleryImages(id) {
   const data = generateImageData(id, 10, 10);
   return data;
 }
-export async function fetchMenu() {
-  // console.log(id);
-  const data = [
-    { title: "Home", url: "/" },
-    { title: "About", url: "/judges/list" },
-    { title: "Gallery", url: "/gallery/list" },
-    { title: "Contact", url: "/" },
-  ];
+
+export async function fetchPdfFile() {
+  const data = "/Pdf/pdf-1.pdf";
   return data;
 }
