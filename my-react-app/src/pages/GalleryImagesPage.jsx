@@ -10,9 +10,9 @@ import "swiper/css/thumbs";
 export default function GalleryImagesPage() {
   const [searchParams] = useSearchParams();
   const [images, setImages] = useState([]);
-  const [enlargedView, setEnlargedView] = useState(false); // Determines which view to show
-  const [activeImage, setActiveImage] = useState(0); // Keeps track of the active/enlarged image index
-  const [thumbsSwiper, setThumbsSwiper] = useState(null); // Swiper instance for thumbnails
+  const [enlargedView, setEnlargedView] = useState(false);
+  const [activeImage, setActiveImage] = useState(0);
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const gallery_id = searchParams.get("s");
 
   useEffect(() => {
@@ -29,26 +29,27 @@ export default function GalleryImagesPage() {
 
   const openEnlargedView = (index) => {
     setActiveImage(index);
-    setThumbsSwiper(null); // Reset the thumbs swiper instance
+    setThumbsSwiper(null);
     setEnlargedView(true);
   };
 
   const closeEnlargedView = () => {
     setEnlargedView(false);
-    setThumbsSwiper(null); // Reset the thumbs swiper when closing
+    setThumbsSwiper(null);
   };
 
   return (
     <div className="p-4">
       {!enlargedView ? (
-        // Card View
         <>
-          <h1 className="text-2xl font-bold mb-4">Gallery Images</h1>
+          <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
+            Gallery Images
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {images.map((image, index) => (
               <div
                 key={image.id}
-                className="border p-4 rounded-lg shadow-lg cursor-pointer"
+                className="border p-4 rounded-lg shadow-lg cursor-pointer bg-white dark:bg-gray-800 dark:border-gray-700"
                 onClick={() => openEnlargedView(index)}
               >
                 <img
@@ -56,13 +57,14 @@ export default function GalleryImagesPage() {
                   alt={image.caption}
                   className="w-full h-48 object-cover"
                 />
-                <p className="text-sm text-gray-600 mt-2">{image.caption}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  {image.caption}
+                </p>
               </div>
             ))}
           </div>
         </>
       ) : (
-        // Enlarged View with Swiper
         <div className="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50">
           <button
             onClick={closeEnlargedView}
@@ -77,9 +79,6 @@ export default function GalleryImagesPage() {
             initialSlide={activeImage}
             className="w-full max-w-4xl h-96 mb-4"
             modules={[Navigation, Thumbs]}
-            onSwiper={(swiper) => {
-              swiper.update(); // Ensure swiper updates on modal reopen
-            }}
           >
             {images.map((image) => (
               <SwiperSlide key={image.id}>
