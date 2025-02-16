@@ -15,13 +15,16 @@ export default function NewsList() {
   }, [headerId]);
 
   const headers = [
-    { label: "Sl. No.", field: "serial", sortable: false },
-    { label: "Date", field: "date", sortable: true },
-    { label: "Body", field: "body", sortable: true },
-    { label: "PDF", field: "pdf", sortable: false },
+    {
+      label: "Sl. No.",
+      field: "serial",
+      sortable: false,
+      className: "w-1/10",
+    },
+    { label: "Date", field: "date", sortable: true, className: "w-2/10" },
+    { label: "Body", field: "body", sortable: true, className: "w-5/10" },
+    { label: "PDF", field: "pdf", sortable: false, className: "w-2/10" },
   ];
-
-  const fields = ["serial", "date", "body", "pdf"];
 
   return (
     <div className="dark:bg-gray-900 py-5">
@@ -31,7 +34,7 @@ export default function NewsList() {
         </h2>
 
         {/* Pass data, headers, and fields to the Table */}
-        <Table data={newsList} headers={headers} fields={fields} />
+        <Table data={newsList} headers={headers} />
       </div>
     </div>
   );

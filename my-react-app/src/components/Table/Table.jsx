@@ -10,12 +10,13 @@ Table.propTypes = {
       label: PropTypes.string.isRequired,
       field: PropTypes.string.isRequired,
       sortable: PropTypes.bool,
+      className: PropTypes.string,
     })
   ).isRequired,
-  fields: PropTypes.arrayOf(PropTypes.string).isRequired,
+  className: PropTypes.string, // Added prop type for custom className
 };
 
-export default function Table({ data, headers, fields }) {
+export default function Table({ data, headers, className = "" }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortConfig, setSortConfig] = useState({
     field: null,
@@ -75,7 +76,7 @@ export default function Table({ data, headers, fields }) {
 
   // Generate page numbers
   useEffect(() => {
-    const range = 2;
+    const range = 1;
     const arr = [1];
     if (currentPage - range > 2) arr.push("...");
     for (
@@ -93,14 +94,16 @@ export default function Table({ data, headers, fields }) {
   return (
     <div>
       {/* Render Table */}
-      <table className="min-w-full bg-white dark:bg-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700">
+      <table
+        className={`min-w-full bg-white dark:bg-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-700 ${className}`}
+      >
         <thead>
           <tr>
             {headers.map((header, index) => (
               <th
                 key={index}
                 onClick={() => header.sortable && handleSort(header.field)}
-                className={`px-4 py-2 border-b   ${
+                className={`px-4 py-2 border-b ${header.className} ${
                   header.sortable ? "cursor-pointer hover:underline" : ""
                 }`}
               >
@@ -120,13 +123,13 @@ export default function Table({ data, headers, fields }) {
         <tbody>
           {paginatedData.map((row, index) => (
             <tr key={index}>
-              {fields.map((field, fieldIndex) => (
+              {headers.map((header, fieldIndex) => (
                 <td key={fieldIndex} className="px-4 py-2 border-b text-center">
-                  {field === "serial" ? (
+                  {header.field === "serial" ? (
                     (currentPage - 1) * itemsPerPage + index + 1
-                  ) : field === "pdf" && row[field] ? (
+                  ) : header.field === "pdf" && row[header.field] ? (
                     <a
-                      href={row[field]}
+                      href={row[header.field]}
                       download
                       className="text-blue-500 hover:text-blue-700 dark:text-blue-400"
                       title="Download PDF"
@@ -136,7 +139,7 @@ export default function Table({ data, headers, fields }) {
                       pdf
                     </a>
                   ) : (
-                    row[field] || "-"
+                    row[header.field] || "-"
                   )}
                 </td>
               ))}
