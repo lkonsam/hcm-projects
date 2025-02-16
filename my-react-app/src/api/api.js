@@ -1,3 +1,4 @@
+import judgesData from "./judgesData.json";
 //Data in the Hero section
 export async function fetchHeroData() {
   const heroData = [
@@ -271,36 +272,7 @@ export async function fetchHolidays() {
   return data;
 }
 export async function fetchJudges() {
-  const data = [
-    {
-      judge_id: 1,
-      name: "D. Krishnakumar",
-      title: "Hon'ble Mr. Justice",
-      post: "Chief Justice",
-      image: "/Judges/justice_1.png",
-    },
-    {
-      judge_id: 2,
-      name: "Ahanthem Bimol Singh",
-      title: "Hon'ble Mr. Justice",
-      post: "Justice",
-      image: "/Judges/justice_2.png",
-    },
-    {
-      judge_id: 3,
-      name: "A. Guneshwar Sharma",
-      title: "Hon'ble Mr. Justice",
-      post: "Justice",
-      image: "/Judges/justice_3.jpg",
-    },
-    {
-      judge_id: 4,
-      name: "Golmei Gaiphulshillu Kabui",
-      title: "Hon'ble Mrs. Justice",
-      post: "Justice",
-      image: "/Judges/justice_4.jpg",
-    },
-  ];
+  const data = judgesData;
 
   return data;
 }
@@ -359,7 +331,7 @@ export async function fetchMenu() {
   // console.log(id);
   const data = [
     { title: "Home", url: "/" },
-    { title: "About", url: "/" },
+    { title: "About", url: "/judges/list" },
     { title: "Gallery", url: "/gallery/list" },
     { title: "Contact", url: "/" },
   ];

@@ -1,3 +1,74 @@
 [
-    
-]
+    {
+      "judge_id": 1,
+      "name": "D. Krishnakumar",
+      "title": "Hon'ble Mr. Justice",
+      "post": "Chief Justice",
+      "image": "/Judges/justice_1.png",
+      "biography": [
+        { "header": "Full Name", "value": "Hon'ble Thiru Justice D.Krishnakumar", "show": true },
+        { "header": "Parents", "value": "Thiru. A.P.Deivasigamani and Late Tmt.Saraswathi", "show": true },
+        { "header": "Date of Birth", "value": "22nd May, 1963", "show": true },
+        { "header": "Education", "value": "B.Sc. (Presidency College), B.L. (Madras Law College)", "show": true },
+        { "header": "Enrollment", "value": "Enrolled as an Advocate in 1987", "show": true },
+        { "header": "Career Highlights", "value": "Served as Government Advocate (1991-96), Special Government Pleader (2001-06), and Special Government Pleader (Education) till elevation.", "show": true },
+        { "header": "Appointment", "value": "Permanent Judge of the High Court of Madras on 07.04.2016", "show": true },
+        { "header": "Chief Justice", "value": "Sworn in as Chief Justice of High Court of Manipur on 22nd November, 2024.", "show": true }
+      ]
+    },
+    {
+      "judge_id": 2,
+      "name": "Ahanthem Bimol Singh",
+      "title": "Hon'ble Mr. Justice",
+      "post": "Justice",
+      "image": "/Judges/justice_2.png",
+      "biography": [
+        { "header": "Full Name", "value": "Ahanthem Bimol Singh", "show": true },
+        { "header": "Father's Name", "value": "(Late) A.Nilamani Singh", "show": true },
+        { "header": "Date of Birth", "value": "01.02.1966", "show": true },
+        { "header": "Place of Birth", "value": "Keishamthong Ahanthem Leikai, Imphal", "show": true },
+        { "header": "Qualifications", "value": "B.A., L.L.B.", "show": true },
+        { "header": "Enrollment", "value": "Enrolled on 20.01.1994 (Enroll No.268/1993-94)", "show": true },
+        { "header": "Areas of Practice", "value": "Service, Constitutional, Civil, Revenue, and Administrative law matters", "show": true },
+        { "header": "Appointment", "value": "Took oath as Additional Judge, High Court of Manipur on 18th March 2020", "show": true }
+      ]
+    },
+    {
+      "judge_id": 3,
+      "name": "A. Guneshwar Sharma",
+      "title": "Hon'ble Mr. Justice",
+      "post": "Justice",
+      "image": "/Judges/justice_3.jpg",
+      "biography": [
+        { "header": "Full Name", "value": "Aribam Guneshwar Sharma", "show": true },
+        { "header": "Father's Name", "value": "A. Brajakumar Sharma", "show": true },
+        { "header": "Date of Birth", "value": "01-03-1967", "show": true },
+        { "header": "Place of Birth", "value": "Yaiskul Police Lane, Near: Krishan Premi Oil Pump, Imphal", "show": true },
+        { "header": "Education", "value": "Matric (Ramlal Paul HSS), B.Sc. & LLB (Delhi University)", "show": true },
+        { "header": "Enrollment", "value": "Bar Council of Delhi (Enroll No. D/21/1996)", "show": true },
+        { "header": "Practice Areas", "value": "Civil, Revenue, Criminal cases in SC and HC of Delhi, CAT, and Consumer Forums", "show": true },
+        { "header": "Appointment", "value": "Appointed as Grade-I Officer in Manipur Judicial Service on 26/5/2010", "show": true },
+        { "header": "Tenure Highlights", "value": "Held various posts, including Registrar General, High Court of Manipur (2016-2021)", "show": true },
+        { "header": "Judgeship", "value": "Took oath as Judge, High Court of Manipur on 6th February 2023.", "show": true }
+      ]
+    },
+    {
+      "judge_id": 4,
+      "name": "Golmei Gaiphulshillu Kabui",
+      "title": "Hon'ble Mrs. Justice",
+      "post": "Justice",
+      "image": "/Judges/justice_4.jpg",
+      "biography": [
+        { "header": "Full Name", "value": "Mrs. Golmei Gaiphulshillu Kabui", "show": true },
+        { "header": "Spouse", "value": "Gonglin Faumei", "show": true },
+        { "header": "Date of Birth", "value": "26.03.1963", "show": true },
+        { "header": "Address", "value": "Namthanlong, Thangmeiband, Imphal West", "show": true },
+        { "header": "Education", "value": "B.A., L.L.B.", "show": true },
+        { "header": "Enrollment", "value": "Enrolled on 12.09.1989", "show": true },
+        { "header": "Career Highlights", "value": "First lady Additional Central Government Counsel in the state", "show": true },
+        { "header": "Appointment", "value": "Appointed as Judge of the High Court of Manipur on 16.10.2023", "show": true },
+        { "header": "Activities", "value": "Distributed essentials during COVID-19 and improved legal services as MASLSA Member Secretary", "show": true }
+      ]
+    }
+  ]
+  
