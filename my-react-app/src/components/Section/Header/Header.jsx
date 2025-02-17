@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../Logo/Logo";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
@@ -22,6 +22,12 @@ export default function Header() {
 
 function NavLink({ menu }) {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Track the current URL
+
+  // Close menu when URL changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
 
   return (
     <nav className="flex items-center justify-between px-4 md:px-0 py-4 mb-4">
@@ -53,7 +59,7 @@ function NavLink({ menu }) {
         </button>
         {/* Menu Items */}
         <ul className="flex flex-col items-start mt-16 px-6 space-y-4">
-          <MainMenu menu={menu} />
+          <MainMenu menu={menu} closeMenu={() => setIsOpen(false)} />
         </ul>
       </div>
 
@@ -65,19 +71,36 @@ function NavLink({ menu }) {
   );
 }
 
-function MainMenu({ menu }) {
+function MainMenu({ menu, closeMenu }) {
+  const location = useLocation(); // Track current URL
+
   return (
     <>
-      {menu.map((item, ind) => (
-        <li key={ind} className="md:m-2">
-          <Link
-            to={item.url}
-            className="text-xl font-bold text-white hover:border-b-4"
-          >
-            {item.title}
-          </Link>
-        </li>
-      ))}
+      {menu.map((item, ind) => {
+        // Get the base path of the item URL
+        const basePath = item.url.split(/[?#]/)[0]; // Removes parameters or hash
+
+        const isActive =
+          basePath === "/"
+            ? location.pathname === "/" // Exact match for the homepage
+            : location.pathname.startsWith(basePath); // Partial match for other paths
+
+        return (
+          <li key={ind} className="md:m-2">
+            <Link
+              to={item.url}
+              onClick={() => closeMenu && closeMenu()} // Close mobile menu on click
+              className={`text-xl font-bold text-white hover:border-white ${
+                isActive
+                  ? "border-b-4 border-blue-500" // Active style
+                  : "hover:border-b-4"
+              }`}
+            >
+              {item.title}
+            </Link>
+          </li>
+        );
+      })}
     </>
   );
 }
